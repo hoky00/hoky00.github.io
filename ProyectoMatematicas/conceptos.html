@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptos Matemáticos</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/definicion.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
+</head>
+<body>
+    <li class="nav-item"><a class="nav-link text-white" href="index.html">Regresar al Inicio</a></li>
+    <div class="container mt-5">
+        <h2 class="text-center">Conceptos Matemáticos</h2>
+        <div class="accordion mt-4" id="conceptosAccordion" x-data="{ open: 1 }">
+            
+            <!-- Operaciones Básicas -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" :class="{'collapsed': open !== 1}" x-on:click="open = open === 1 ? 0 : 1">
+                        Operaciones Básicas
+                    </button>
+                </h2>
+                <div x-show="open === 1" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                        <h3>Sumas</h3>
+                        <p>La adición o suma es la operación matemática de composición que consiste en combinar o añadir dos números o más para obtener una cantidad final o total.</p>
+                        <p>Ejemplo: 2 + 3 = 5</p>
+                        <img src="img/descarga.jpeg" alt="Imagen ilustrativa de suma" class="img-fluid">
+
+                        <h3>Restas</h3>
+                        <p>La resta o la sustracción es una operación aritmética que representa la operación de eliminación de objetos de una colección.</p>
+                        <p>Ejemplo: 5 - 2 = 3</p>
+                        <img src="img/resta.png" alt="Imagen ilustrativa de resta" class="img-fluid">
+
+                        <h3>Multiplicaciones</h3>
+                        <p>La multiplicación es una operación que se establece en un conjunto numérico, y es la operación inversa de la división.</p>
+                        <p>Ejemplo: 3 × 4 = 12 (porque 3 + 3 + 3 + 3 = 12)</p>
+                        <img src="img/multiplicacion.jpeg" alt="Imagen ilustrativa de multiplicación" class="img-fluid">
+
+                        <h3>Divisiones</h3>
+                        <p>La división es la operación que consiste en indagar cuántas veces un número (divisor) está contenido en otro número (dividendo).</p>
+                        <p>Ejemplo: 12 ÷ 4 = 3</p>
+                        <img src="img/division.png" alt="Imagen ilustrativa de división" class="img-fluid">
+
+                        <h3>Raíces Cuadradas</h3>
+                        <p>La raíz cuadrada es un número que, al multiplicarse por sí mismo, nos da otro número.</p>
+                        <p>Ejemplo: √9 = 3 (porque 3 × 3 = 9)</p>
+                        <img src="img/raiz cuadrada.jpeg" alt="Imagen ilustrativa de raíces cuadradas" class="img-fluid">
+
+                        <h3>Ley de Signos</h3>
+                        <p>La ley de signos es una regla simple para multiplicar o dividir números con signos positivos y negativos.</p>
+                        <p>Ejemplo: (+5) × (+3) = +15; (-5) × (+3) = -15</p>
+                        <img src="img/ley de signos.jpeg" alt="Imagen ilustrativa de ley de signos" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Teoría de Conjuntos -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button" type="button" :class="{'collapsed': open !== 2}" x-on:click="open = open === 2 ? 0 : 2">
+                        Teoría de Conjuntos
+                    </button>
+                </h2>
+                <div x-show="open === 2" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <h3>Concepto de Conjuntos</h3>
+                        <p>Un conjunto es una colección de elementos bien definidos, como números o letras. Se denotan con llaves, por ejemplo, A = {1, 2, 3}.</p>
+                        <img src="img/conjuntos.jpeg" alt="Imagen ilustrativa de conjuntos" class="img-fluid">
+                        
+                        <h3>Tipos de Conjuntos</h3>
+                        <ul>
+                            <li><strong>Conjunto Finito:</strong> Tiene un número específico de elementos.</li>
+                            <li><strong>Conjunto Infinito:</strong> No tiene fin.</li>
+                            <li><strong>Conjunto Vacío:</strong> No tiene elementos.</li>
+                            <li><strong>Conjunto Universal:</strong> Contiene todos los elementos bajo consideración.</li>
+                        </ul>
+                        <img src="img/tipos de conjuntosss.jpg" alt="Imagen ilustrativa de tipos de conjuntos" class="img-fluid">
+
+                        <h3>Operaciones con Conjuntos</h3>
+                        <ul>
+                            <li><strong>Unión ( ∪ ):</strong> Agrupa todos los elementos de dos conjuntos.</li>
+                            <li><strong>Intersección ( ∩ ):</strong> Encuentra los elementos comunes entre dos conjuntos.</li>
+                            <li><strong>Diferencia ( - ):</strong> Muestra los elementos que están en un conjunto pero no en el otro.</li>
+                        </ul>
+                        <img src="img/tipos de conjuntos.jpeg" alt="Imagen ilustrativa de operaciones con conjuntos" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Figuras Geométricas -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button" type="button" :class="{'collapsed': open !== 3}" x-on:click="open = open === 3 ? 0 : 3">
+                        Figuras Geométricas
+                    </button>
+                </h2>
+                <div x-show="open === 3" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <h3>Cuadrado</h3>
+                        <p>El cuadrado es un cuadrilátero regular con cuatro lados iguales y cuatro ángulos rectos (90 grados).</p>
+                        <p>Área: lado × lado.</p>
+                        <img src="img/Cuadrado.jpeg" alt="Imagen ilustrativa de cuadrado" class="img-fluid">
+                        
+                        <h3>Círculo</h3>
+                        <p>El círculo es una figura geométrica plana formada por todos los puntos de un plano que están a la misma distancia de un punto central llamado centro.</p>
+                        <p>Área: π × radio².</p>
+                        <img src="img/circulo.jpeg" alt="Imagen ilustrativa de círculo" class="img-fluid">
+                        
+                        <h3>Triángulo</h3>
+                        <p>El triángulo es una figura geométrica de tres lados y tres vértices.</p>
+                        <p>Área: (base × altura) ÷ 2.</p>
+                        <img src="img/triangulo.jpeg" alt="Imagen ilustrativa de triángulo" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

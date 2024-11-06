@@ -1,0 +1,197 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #F4F4F9; /* Gris suave */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezados */
+h1, h2, h4 {
+    color: #3E4A59; /* Gris oscuro */
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Contenedor Principal */
+.container {
+    max-width: 900px;
+    padding: 20px;
+    margin: auto;
+    background-color: #FFFFFF; /* Fondo blanco */
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.03);
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #4C6A92; /* Azul grisáceo suave */
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #A7C5D3; /* Azul claro suave */
+}
+
+/* Enlaces de navegación - Estilo sin hover */
+.nav-link {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #4C6A92; /* Color constante */
+}
+
+/* Encabezado principal */
+h1 {
+    font-size: 2.8rem;
+    margin: 20px 0;
+}
+
+/* Contenido del acordeón */
+.accordion-button {
+    background-color: #E1E8F0; /* Gris suave */
+    color: #3E4A59; /* Gris oscuro */
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+    background-color: #BCC7D4; /* Gris más oscuro */
+}
+
+.accordion-body {
+    background-color: #F7FAFC; /* Gris muy suave */
+    color: #3E4A59; /* Gris oscuro */
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Listas en el contenido */
+.accordion-body ul {
+    padding-left: 20px;
+    list-style-type: '•';
+}
+
+.accordion-body ul li {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Botón de verificación */
+button.btn-success {
+    background-color: #78C5A1; /* Verde pastel */
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+button.btn-success:hover {
+    background-color: #56A77B; /* Verde más oscuro */
+}
+
+/* Resultados */
+.result-success {
+    background-color: #D1F8E0;
+    color: #4CAF50;
+    border: 1px solid #A5D6A7;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.result-error {
+    background-color: #FFEBEE;
+    color: #F44336;
+    border: 1px solid #EF9A9A;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Formulario de login y registro */
+.form-group label {
+    font-weight: bold;
+    color: #4C6A92; /* Azul grisáceo */
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 2px solid #E1E8F0; /* Gris suave */
+    padding: 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #78C5A1; /* Verde pastel */
+    box-shadow: 0 0 8px rgba(120, 197, 161, 0.5);
+}
+
+button[type="submit"] {
+    background-color: #78C5A1; /* Verde pastel */
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 0;
+    border-radius: 8px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+button[type="submit"]:hover {
+    background-color: #56A77B; /* Verde más oscuro */
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .accordion-button, .btn-success, .navbar-brand {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #4C6A92; /* Azul grisáceo suave */
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}

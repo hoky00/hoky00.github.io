@@ -1,0 +1,154 @@
+/* Archivo: ejercicios.css */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+h1 {
+    color: #007bff;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 10px 0 20px;
+}
+
+/* Contenedor principal */
+.level-section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 650px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.level-section input[type="number"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    margin: 10px 0;
+}
+
+.level-section input[type="number"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.level-section button {
+    width: 48%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    margin-right: 4%;
+}
+
+.level-section button:hover {
+    background-color: #0056b3;
+}
+
+.level-section button:last-child {
+    margin-right: 0;
+}
+
+/* Botones de navegación */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.navigation-buttons button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #007bff;
+    transition: background-color 0.3s ease;
+}
+
+.navigation-buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* Mensajes de resultado */
+.result {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.text-success {
+    color: #28a745;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.text-danger {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .level-section {
+        padding: 20px;
+    }
+
+    .level-section input[type="number"] {
+        width: calc(100% - 10px);
+        margin: 5px 0;
+    }
+
+    .level-section button {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .navigation-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navigation-buttons button {
+        width: 100%;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Matemáticas</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Botones de Navegación -->
+    <div class="container mt-4">
+        <div class="row justify-content-center mb-4">
+            <div class="col-auto">
+                <button class="btn btn-secondary" onclick="goToIndex()">Regresar al Inicio</button>
+                <button class="btn btn-danger" onclick="logout()">Cerrar Sesión</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="text-center mb-5">Ejercicios de Matemáticas</h1>
+        
+        <!-- Nivel 1: Sumas -->
+        <div class="level-section" id="level1">
+            <h2 class="text-center">Nivel 1: Sumas</h2>
+            <div class="mb-3">
+                <input type="number" id="sumAnswer1" class="form-control" placeholder="¿5 + 3?">
+            </div>
+            <div class="mb-3">
+                <input type="number" id="sumAnswer2" class="form-control" placeholder="¿12 + 7?">
+            </div>
+            <div class="mb-3">
+                <input type="number" id="sumAnswer3" class="form-control" placeholder="¿9 + 5?">
+            </div>
+            <button class="btn btn-success w-100 mb-3" onclick="verifySums()">Verificar Sumas</button>
+            <button class="btn btn-secondary w-100" onclick="goBackLevel()">Regresar Nivel</button>
+            <p id="sumResult" class="result mt-3 text-center"></p>
+        </div>
+
+        <!-- Nivel 2: Restas -->
+        <div class="level-section" id="level2" style="display: none;">
+            <h2 class="text-center">Nivel 2: Restas</h2>
+            <div class="mb-3">
+                <input type="number" id="subAnswer1" class="form-control" placeholder="¿10 - 4?">
+            </div>
+            <div class="mb-3">
+                <input type="number" id="subAnswer2" class="form-control" placeholder="¿15 - 6?">
+            </div>
+            <div class="mb-3">
+                <input type="number" id="subAnswer3" class="form-control" placeholder="¿20 - 7?">
+            </div>
+            <button class="btn btn-success w-100 mb-3" onclick="verifySubtractions()">Verificar Restas</button>
+            <button class="btn btn-secondary w-100" onclick="goBackLevel()">Regresar Nivel</button>
+            <p id="subResult" class="result mt-3 text-center"></p>
+        </div>
+
+        <!-- Nivel 3: Multiplicaciones -->
+        <div class="level-section" id="level3" style="display: none;">
+            <h2 class="text-center">Nivel 3: Multiplicaciones</h2>
+            <div class="mb-3">
+                <input type="number" id="mulAnswer1" class="form-control" placeholder="¿3 * 4?">
+            </div>
+            <div class="mb-3">
+                <input type="number" id="mulAnswer2" class="form-control" placeholder="¿2 * 7?">
+            </div>
+            <div class="mb-3">
+                <input type="number" id="mulAnswer3" class="form-control" placeholder="¿5 * 5?">
+            </div>
+            <button class="btn btn-success w-100 mb-3" onclick="verifyMultiplications()">Verificar Multiplicaciones</button>
+            <button class="btn btn-secondary w-100" onclick="goBackLevel()">Regresar Nivel</button>
+            <p id="mulResult" class="result mt-3 text-center"></p>
+        </div>
+
+        <!-- Nivel 4: División -->
+        <div class="level-section" id="level4" style="display: none;">
+            <h2 class="text-center">Nivel 4: División</h2>
+            <div class="mb-3">
+                <input type="number" id="divAnswer1" class="form-control" placeholder="¿12 ÷ 3?">
+            </div>
+            <div class="mb-3">
+                <input type="number" id="divAnswer2" class="form-control" placeholder="¿20 ÷ 5?">
+            </div>
+            <div class="mb-3">
+                <input type="number" id="divAnswer3" class="form-control" placeholder="¿15 ÷ 3?">
+            </div>
+            <button class="btn btn-success w-100 mb-3" onclick="verifyDivision()">Verificar División</button>
+            <button class="btn btn-secondary w-100" onclick="goBackLevel()">Regresar Nivel</button>
+            <p id="divResult" class="result mt-3 text-center"></p>
+        </div>
+
+        <!-- Nivel 5: Sumas y Restas Combinadas -->
+        <div class="level-section" id="level5" style="display: none;">
+            <h2 class="text-center">Nivel 5: Sumas y Restas Combinadas</h2>
+            <div class="mb-3">
+                <input type="number" id="mixAnswer1" class="form-control" placeholder="¿5 + 3 - 2?">
+            </div>
+            <div class="mb-3">
+                <input type="number" id="mixAnswer2" class="form-control" placeholder="¿10 - 3 + 4?">
+            </div>
+            <div class="mb-3">
+                <input type="number" id="mixAnswer3" class="form-control" placeholder="¿7 + 2 - 1?">
+            </div>
+            <button class="btn btn-success w-100 mb-3" onclick="verifyMix()">Verificar Sumas y Restas</button>
+            <button class="btn btn-secondary w-100" onclick="goBackLevel()">Regresar Nivel</button>
+            <p id="mixResult" class="result mt-3 text-center"></p>
+        </div>
+
+        <!-- Nivel 6: Multiplicación, Suma y Resta Combinadas -->
+        <div class="level-section" id="level6" style="display: none;">
+            <h2 class="text-center">Nivel 6: Multiplicación, Suma y Resta Combinadas</h2>
+            <div class="mb-3">
+                <input type="number" id="complexAnswer1" class="form-control" placeholder="¿3 * 2 + 4 - 1?">
+            </div>
+            <div class="mb-3">
+                <input type="number" id="complexAnswer2" class="form-control" placeholder="¿2 * 5 + 3 - 6?">
+            </div>
+            <div class="mb-3">
+                <input type="number" id="complexAnswer3" class="form-control" placeholder="¿4 * 3 - 5 + 2?">
+            </div>
+            <button class="btn btn-success w-100 mb-3" onclick="verifyComplex()">Verificar Ejercicios Combinados</button>
+            <button class="btn btn-secondary w-100" onclick="goBackLevel()">Regresar Nivel</button>
+            <p id="complexResult" class="result mt-3 text-center"></p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Matemáticas para Niños</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
+    <style>
+        /* Estilos adicionales para centrar los botones en la barra de navegación */
+        .navbar-nav {
+            display: flex;
+            justify-content: center;
+        }
+        .navbar-nav .nav-item {
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container">
+        <a class="navbar-brand text-white" href="index.html">Matemáticas Divertidas</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link text-white" href="conceptos.html">Conceptos</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="ejercicios.html">Ejercicios</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="login.html" onclick="logout(event)">Cerrar Sesión</a></li>                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Contenido de Bienvenida -->
+<section class="container text-center mt-5">
+    <h1>¡Bienvenidos a Matemáticas Divertidas!</h1>
+    <p>Esta página está diseñada para ayudarte a aprender matemáticas de una manera divertida y sencilla.</p>
+    <p>Aquí encontrarás recursos, ejercicios y conceptos que harán de tus estudios una experiencia más amena.</p>
+</section>
+
+<!-- Carousel de Características -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">Lo que ofrecemos</h2>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/recursos educativos.jpeg" class="d-block w-100" alt="Recursos educativos">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Recursos educativos divertidos</h5>
+                    <p>Actividades interactivas y juegos educativos para aprender matemáticas jugando.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/ejercicios progresivos.jpeg" class="d-block w-100" alt="Ejercicios progresivos">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Ejercicios progresivos</h5>
+                    <p>Avanza al siguiente nivel solo cuando hayas completado correctamente todos los ejercicios.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/niveles matematicos.jpg" class="d-block w-100" alt="Sistema de niveles">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Sistema de niveles</h5>
+                    <p>Aprende paso a paso con un sistema de niveles que asegura tu progreso.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Testimonios -->
+<section class="container text-center my-5" x-data="{ openTestimonio: null }">
+    <h2 class="mb-4">Lo que dicen nuestros usuarios</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" @click="openTestimonio = openTestimonio === 1 ? null : 1">
+                <div class="card-body">
+                    <p class="card-text">"Esta página hizo que las matemáticas fueran mucho más fáciles y divertidas para mí. ¡Me encanta el sistema de niveles!"</p>
+                    <footer class="blockquote-footer">María, Estudiante</footer>
+                    <div x-show="openTestimonio === 1" class="mt-3">
+                        <p>María destaca que los niveles de dificultad progresivos fueron clave para su motivación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" @click="openTestimonio = openTestimonio === 2 ? null : 2">
+                <div class="card-body">
+                    <p class="card-text">"El contenido interactivo y los ejercicios me motivaron a aprender más y a mejorar rápidamente." </p>
+                    <footer class="blockquote-footer">Juan, Estudiante</footer>
+                    <div x-show="openTestimonio === 2" class="mt-3">
+                        <p>Juan menciona que los ejercicios interactivos le ayudaron a practicar y mejorar sus habilidades rápidamente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" @click="openTestimonio = openTestimonio === 3 ? null : 3">
+                <div class="card-body">
+                    <p class="card-text">"Mis hijos disfrutan mucho de los juegos y los ejercicios. Es una excelente manera de enseñarles matemáticas." </p>
+                    <footer class="blockquote-footer">Carlos, Padre</footer>
+                    <div x-show="openTestimonio === 3" class="mt-3">
+                        <p>Carlos resalta que la diversión de los juegos hizo que sus hijos se entusiasmaran más por aprender.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Recursos adicionales -->
+<section class="container text-center my-5">
+    <h2 class="mb-4">Recursos adicionales</h2>
+    <p>En esta página podrás encontrar materiales extra que te ayudarán a fortalecer tus conocimientos en matemáticas:</p>
+    <ul class="list-unstyled">
+        <li x-data="{ open: false }">
+            <a href="https://www.khanacademy.org/math" target="_blank" @click="open = !open">Khan Academy - Recursos gratuitos de matemáticas</a>
+            <p x-show="open" class="mt-2">Khan Academy ofrece lecciones y ejercicios interactivos de matemáticas gratuitos.</p>
+        </li>
+        <li x-data="{ open: false }">
+            <a href="https://www.mathplayground.com/" target="_blank" @click="open = !open">Math Playground - Juegos educativos para aprender matemáticas</a>
+            <p x-show="open" class="mt-2">Math Playground presenta juegos que ayudan a los niños a aprender conceptos matemáticos de manera divertida.</p>
+        </li>
+        <li x-data="{ open: false }">
+            <a href="https://www.cemexeducacion.com/matematicas/" target="_blank" @click="open = !open">Cemex Educación - Actividades para mejorar las matemáticas</a>
+            <p x-show="open" class="mt-2">Cemex ofrece actividades prácticas que mejoran las habilidades matemáticas de los estudiantes.</p>
+        </li>
+    </ul>
+</section>
+
+<!-- Sección de Información sobre el Proyecto -->
+<section class="container text-center my-5">
+    <h2 class="mb-4">Sobre Matemáticas Divertidas</h2>
+    <p>Matemáticas Divertidas es un proyecto educativo diseñado para niños de 6 a 12 años. Nuestro objetivo es hacer que aprender matemáticas sea fácil, divertido y accesible para todos. Con recursos interactivos, ejercicios progresivos y un sistema de niveles, garantizamos que los estudiantes disfruten mientras aprenden y se mantengan motivados durante todo el proceso.</p>
+</section>
+
+<!-- Footer -->
+<footer class="bg-primary text-white text-center py-3 mt-5">
+    <div class="container">
+        <p>&copy; 2023 Matemáticas Divertidas. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
